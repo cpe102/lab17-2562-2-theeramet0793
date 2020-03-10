@@ -44,6 +44,7 @@ int main(){
       int have_grade=0;
       cout<<"Please input your command: ";
       getline(cin,s);
+      cout<<"--------------------------------------\n";
       int idx=s.find_first_of(" ");
       string s1= s.substr(0,idx);
       string s2= s.substr(idx+1,(s.size()-idx));
@@ -56,9 +57,11 @@ int main(){
           for(int i=0;i<nameStudent_Capital.size();i++){
               if((nameStudent_Capital[i]==s2)){
                   cout<<nameStudent[i]<<"'s grade = "<<gradeStudent[i]<<endl;
+                  cout<<"--------------------------------------\n";
                   break;
               }else if(i==nameStudent_Capital.size()-1){
                   cout<<"Cannot found\n";
+                  cout<<"--------------------------------------\n";
               }
               
           }
@@ -69,9 +72,10 @@ int main(){
                   cout<<nameStudent[i]<<endl;
                   have_grade+=1;
               }
-         }
+         }cout<<"--------------------------------------\n";
          if(have_grade==0){
              cout<<"Cannot found\n";
+             cout<<"--------------------------------------\n";
          }
       }
       else if(s1.compare("EXIT")==0){
